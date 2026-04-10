@@ -1,0 +1,238 @@
+/* css reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+input {
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* main styling */
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f0f2f5;
+  color: #1a1a2e;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2.5em;
+  background-color: #1a1a2e;
+  color: white;
+}
+
+.header h3 {
+  font-size: 1.4em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#addBook {
+  background-color: #4f8ef7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+#addBook:hover {
+  background-color: #3a7ae0;
+}
+
+/* Main Content */
+
+.mainContent {
+  margin: 2.5em 3em;
+}
+
+.mainContent h1 {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 1.2em;
+  color: #1a1a2e;
+}
+
+/* Cards */
+
+output {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  background-color: white;
+  border: none;
+  border-left: 4px solid transparent; /* reserve space */
+  border-radius: 12px;
+  padding: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  min-height: 190px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.read {
+  border-left: 10px solid #2ecc71;
+}
+
+/* Card buttons */
+
+.card-btn {
+  display: flex;
+  gap: 0.5em;
+  margin-top: auto;
+}
+
+.toggleRead {
+  background-color: #4f8ef7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.35em 0.7em;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.toggleRead:hover {
+  background-color: #3a7ae0;
+}
+
+.remove {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.35em 0.7em;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.remove:hover {
+  background-color: #e04444;
+}
+
+/* Dialog */
+
+dialog {
+  margin: auto;
+  border: none;
+  border-radius: 14px;
+  padding: 2em;
+  min-width: 320px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+dialog h3 {
+  margin-bottom: 1.2em;
+  font-size: 1.2em;
+  color: #1a1a2e;
+}
+
+dialog label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 1em;
+}
+
+dialog input {
+  display: block;
+  width: 100%;
+  margin-top: 0.3em;
+  padding: 0.5em 0.75em;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+dialog input:focus {
+  border-color: #4f8ef7;
+}
+
+dialog button[type="button"] {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.1em;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+dialog button[type="button"]:hover {
+  background-color: #ddd;
+}
+
+dialog button[type="submit"] {
+  background-color: #4f8ef7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.1em;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+dialog button[type="submit"]:hover {
+  background-color: #3a7ae0;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}

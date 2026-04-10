@@ -9,17 +9,40 @@
   <body>
     <div class="header">
       <h3>My Library</h3>
-      <button>+ Add Book</button>
+      <button command="show-modal" commandfor="my-dialog" id="addBook">
+        + Add Book
+      </button>
+
+      <dialog id="my-dialog">
+        <form method="dialog">
+          <h3>Add Book</h3>
+
+          <label>
+            Title:
+            <input type="text" name="title" id="title" required />
+          </label>
+          <br /><br />
+
+          <label>
+            Author:
+            <input type="text" name="author" id="author" required />
+          </label>
+          <br /><br />
+
+          <label>
+            Pages:
+            <input type="number" name="pages" min="1" id="pages" required />
+          </label>
+          <br /><br />
+
+          <button type="button" value="cancel" formnovalidate>Cancel</button>
+          <button type="submit" value="submit" id="submit">Submit</button>
+        </form>
+      </dialog>
     </div>
     <div class="mainContent">
       <h1>Book Collection</h1>
-      <div class="card">
-        <h6 class="title">Atomic Habit</h6>
-        <p class="author">James Clear</p>
-        <p class="pages">123</p>
-        <button class="toggleRead">Toggle Read</button>
-        <button class="Remove">Remove</button>
-      </div>
+      <output> </output>
     </div>
   </body>
   <script src="./script.js"></script>
